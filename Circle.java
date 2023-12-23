@@ -6,7 +6,7 @@ public class Circle  extends Shape{
     static Scanner sc = new Scanner(System.in);
     @Override
     void computeArea() {
-        System.out.println("Area : "+(x*x*Math.PI));
+        System.out.println("Area : "+ (x*x*Math.pi));
     }
     public Circle(){
         System.out.println("Enter radius : ");
