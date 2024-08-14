@@ -1,37 +1,26 @@
-package oopconcepts.Polymorphism.ShapesnArea;
 
+import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.*;
 
-public class Main {
 
-    static Scanner scanner = new Scanner(System.in);
+public class Main{
     public static void main(String[] args) {
-        System.out.println(": Area Calculator :");
-        Shape shape;
-        int input = -1;
-        while (input != 0){
-            System.out.println("1. Area of Circle");
-            System.out.println("2. Area of Triangle");
-            System.out.println("3. Area of Rectangle");
-            input = scanner.nextInt();
-            switch (input){
-                case 0:
-                    break;
-                case 1:
-                    shape = new Circle();
-                    shape.computeArea();
-                    break;
-                case 2 :
-                    shape = new Triangle();
-                    shape.computeArea();
-                    break;
-                case 3:
-                    shape = new Rectangle();
-                    shape.computeArea();
-                    break;
-            }
+        CarRentalSystem rentalSystem = new CarRentalSystem();
 
-        }
+        Car car1 = new Car("C001", "Toyota", "Camry", 1200.0); // Different base price per day for each car
+        Car car2 = new Car("C002", "Honda", "Accord", 1000.0);
+        Car car3 = new Car("C003", "Mahindra", "Thar", 1100.0);
+        Car car4 = new Car("C004", "Mahindra", "Scorpio", 1100.0);
+        Car car5 = new Car("C005", "Chevrolet", "Cruize", 2000.0);
+        Car car6 = new Car("C006", "Mercedes", "Maybach", 5500.0);
+        rentalSystem.addCar(car1);
+        rentalSystem.addCar(car2);
+        rentalSystem.addCar(car3);
+        rentalSystem.addCar(car4);
+        rentalSystem.addCar(car5);
+        rentalSystem.addCar(car6);
+
+        rentalSystem.menu();
     }
 }
-
